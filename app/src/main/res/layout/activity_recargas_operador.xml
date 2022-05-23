@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recargasOperador">
+
+    <TextView
+        android:id="@+id/armario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Armario"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#331275"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"/>
+
+    <ImageButton
+        android:id="@+id/portada"
+        android:layout_width="400dp"
+        android:layout_height="190dp"
+        android:src="@drawable/portada"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/etRecargaDeCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recarga de \n     celular"
+        android:textColor="#331275"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98">
+
+
+        <ImageButton
+            android:id="@+id/movimientos"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:onClick="movimientos"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_movimientos"
+            android:text="Inicio" />
+
+        <ImageButton
+            android:id="@+id/logotel"
+            android:backgroundTint="#331275"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logotel" />
+
+        <ImageButton
+            android:id="@+id/inicio"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_home"
+            android:text="Inicio"
+            android:onClick="inicioHome"/>
+
+        <ImageButton
+            android:id="@+id/logousuario"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="irPerfil"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logousuario" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62"
+        app:srcCompat="@drawable/ic_logorecarga"
+        android:onClick="irAOperadores"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

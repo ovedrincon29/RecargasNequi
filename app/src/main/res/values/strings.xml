@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RecargasNequi</string>
+    <string name="IniciaSesion">Inicia sesión</string>
+    <string name="registrate">Abre una cuenta</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="nequi">NEQUI</string>
+    <string name="nombresApellidos">Nombres y apellidos</string>
+    <string name="correo">Email</string>
+    <string name="telefono">Número de celular</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="confirmarContraseña">Confirmar constraseña</string>
+    <string name="botonRegistrar">Registrar</string>
+    <string name="botonIngresar">Ingresar</string>
+    <string name="botonEntra">Entra</string>
+</resources>

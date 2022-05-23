@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".operadores">
+
+    <TextView
+        android:id="@+id/recargaCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recarga Celular"
+        android:textColor="#331275"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Spinner
+        android:id="@+id/spinnerOperadores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        tools:listitem="@android:layout/test_list_item" />
+
+
+    <EditText
+        android:id="@+id/numCelularARecargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#331275"
+        android:inputType="number"
+        android:maxLength="10"
+        android:hint="Cel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <EditText
+        android:id="@+id/valorARecargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#331275"
+        android:hint="¿Cuánto?"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="La recarga debe ser mínimo de $1.000"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/valorARecargar"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/hacerRecarga"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:text="Recarga"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#BE3574"
+        android:textSize="18dp"
+        app:cornerRadius="70dp"
+        app:strokeColor="#BE3574"
+        android:onClick="hacerRecarga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98">
+
+
+        <ImageButton
+            android:id="@+id/movimientos"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:onClick="movimientos"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_movimientos"
+            android:text="Inicio" />
+
+        <ImageButton
+            android:id="@+id/logotel"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#331275"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logotel" />
+
+        <ImageButton
+            android:id="@+id/inicio"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:onClick="inicioHome"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_home"
+            android:text="Inicio" />
+
+        <ImageButton
+            android:id="@+id/logousuario"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="irPerfil"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logousuario" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

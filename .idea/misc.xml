@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/entrada_personalizada.xml" value="0.3675" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/ic_bolsillos.xml" value="0.3675" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/ic_colchon.xml" value="0.3675" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3225" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/ic_logonequi.xml" value="0.335" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/drawable/ic_logosplash.xml" value="0.335" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_card_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_ingreso.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_movimiento_de_recargas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_movimientos_recargas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_operadores.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_perfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_recargas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_recargas_operador.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WPOSS/AndroidStudioProjects/RecargasNequi/app/src/main/res/layout/spinner_item_estilo.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

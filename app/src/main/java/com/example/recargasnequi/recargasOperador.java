@@ -14,7 +14,7 @@ public class recargasOperador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recargas_operador);
 
-        telSesion = getIntent().getStringExtra("cel");
+
     }
 
     public void inicioHome(View view){
@@ -27,6 +27,7 @@ public class recargasOperador extends AppCompatActivity {
     public void irAOperadores(View view){
 
         Intent intent= new Intent(this, operadores.class);
+        telSesion = getIntent().getStringExtra("cel");
         intent.putExtra("cel", telSesion);
         startActivity(intent);
         finish();

@@ -118,7 +118,7 @@
             android:id="@+id/logotel"
             android:layout_width="105dp"
             android:layout_height="50dp"
-            android:onClick="recargar"
+            android:onClick="irARecargar"
             android:scaleType="centerInside"
             android:src="@drawable/ic_logotel" />
 

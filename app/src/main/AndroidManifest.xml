@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecargasNequi">
         <activity
-            android:name=".cardView"
-            android:exported="false" />
-        <activity
             android:name=".movimientoDeRecargas"
             android:exported="false" />
         <activity

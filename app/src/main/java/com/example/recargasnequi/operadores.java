@@ -21,12 +21,14 @@ public class operadores extends AppCompatActivity {
     private EditText celRecarga, precioRecarga;
     private Spinner operador;
 
+    public operadores() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operadores);
-
-        telSesion = getIntent().getStringExtra("cel");
 
         celRecarga = findViewById(R.id.numCelularARecargar);
         precioRecarga = findViewById(R.id.valorARecargar);
@@ -39,56 +41,70 @@ public class operadores extends AppCompatActivity {
         operador.setAdapter(conexAlSpinner);
     }
 
+    public void recargar(View view) {
+
+        Intent intent = new Intent(this, recargasOperador.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void irPerfil(View view) {
+
+        Intent intent = new Intent(this, perfil.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void movimientos(View view) {
+        Intent intent = new Intent(this, movimientoDeRecargas.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void inicioHome(View view) {
+
+        Intent intent = new Intent(this, recargas.class);
+        startActivity(intent);
+        finish();
+    }
+
     //Método del botón recarga
     public void hacerRecarga(View view) {
+
+        telSesion = getIntent().getStringExtra("cel");
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         String telefonorecarga = celRecarga.getText().toString();
         String valorrecargado = precioRecarga.getText().toString();
 
-        int enteroRecarga = Integer.parseInt(valorrecargado);
+        
         String seleccionDeOperador = operador.getSelectedItem().toString();
+        String telefonoSesion=telSesion;
+        
+        if (!telefonorecarga.isEmpty() && telefonorecarga.length()>=10 && !valorrecargado.isEmpty()) {
+            
+            int enteroRecarga= Integer.parseInt(valorrecargado);
+            if (enteroRecarga>=1000) {
+                ContentValues registroMovimientos = new ContentValues();
+                registroMovimientos.put("telefonorecarga", telefonorecarga);
+                registroMovimientos.put("valorrecargado", enteroRecarga);
+                registroMovimientos.put("operador", seleccionDeOperador);
+                registroMovimientos.put("phone", telefonoSesion);
 
+                BaseDeDatos.insert("registrosmovimientos", null, registroMovimientos);
+                BaseDeDatos.close();
 
+                celRecarga.setText("");
+                precioRecarga.setText("");
 
+                Toast.makeText(this, "Recargar Exitosa", Toast.LENGTH_SHORT).show();
 
-        ContentValues registroMovimientos = new ContentValues();
-        registroMovimientos.put("telefonorecarga", telefonorecarga);
-        registroMovimientos.put("valorrecargado", enteroRecarga);
-        registroMovimientos.put("operador", seleccionDeOperador);
-        registroMovimientos.put("phone", telSesion );
-
-        BaseDeDatos.insert("registrosmovimientos", null, registroMovimientos);
-        BaseDeDatos.close();
-
-        celRecarga.setText("");
-        precioRecarga.setText("");
-
-        Toast.makeText(this, "Recargar Exitosa", Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(this, recargasOperador.class);
-        intent.putExtra("valorRecarga", enteroRecarga);
-        startActivity(intent);
-
-    }
-    public void recargar(View view){
-
-        Intent intent= new Intent(this, recargasOperador.class);
-        startActivity(intent);
-    }
-    public void irPerfil(View view){
-
-        Intent intent= new Intent(this, perfil.class);
-        startActivity(intent);
-    }
-    public void movimientos(View view){
-        Intent intent= new Intent(this, movimientoDeRecargas.class);
-        startActivity(intent);
-    }
-    public void inicioHome(View view){
-
-        Intent intent= new Intent(this, recargas.class);
-        startActivity(intent);
+            }else {
+                Toast.makeText(this, "Valor a recargar inválido", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Datos inválidos", Toast.LENGTH_SHORT).show();
+        }
     }
 }

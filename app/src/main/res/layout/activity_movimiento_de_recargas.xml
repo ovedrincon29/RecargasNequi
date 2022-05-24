@@ -6,15 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".movimientoDeRecargas">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,10 +38,10 @@
             android:id="@+id/inicio"
             android:layout_width="105dp"
             android:layout_height="50dp"
+            android:onClick="inicioHome"
             android:scaleType="centerInside"
             android:src="@drawable/ic_home"
-            android:text="Inicio"
-            android:onClick="inicioHome"/>
+            android:text="Inicio" />
 
         <ImageButton
             android:id="@+id/logousuario"
@@ -58,6 +52,7 @@
             android:src="@drawable/ic_logousuario" />
 
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/tvtelefono"
@@ -93,5 +88,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
